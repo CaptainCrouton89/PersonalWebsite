@@ -37,6 +37,16 @@ function App() {
               )
             }
           />
+          <i
+            className="pi pi-github"
+            onClick={() =>
+              window.open(
+                "https://github.com/CaptainCrouton89",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          />
         </div>
         <h1>
           Hi! <strong>{imSilasText}</strong>
