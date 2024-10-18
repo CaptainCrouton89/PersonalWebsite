@@ -1,0 +1,50 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.app__header {
+  margin-top: 6rem;
+  padding: 0 20%;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 3rem;
+  color: rgb(98, 98, 98);
+}
+
+.pi {
+  transition: color 0.25s;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
+.pi:hover {
+  color: #646cff;
+}
+
+img.profile {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  object-fit: cover;
+}
+
+h1 strong {
+  color: #9296e3;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 500;
+  color: #9ea2ed;
+}
+
+a {
+  text-decoration: underline !important;
+}
