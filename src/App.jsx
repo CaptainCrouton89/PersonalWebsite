@@ -2,8 +2,11 @@
 import "primeicons/primeicons.css";
 import { useTypewriter } from "sr-quick";
 import "./App.css";
+import carletonLogo from "./assets/carleton.png";
+import ceaLogo from "./assets/cea.png";
 import concordLogo from "./assets/concord.jpeg";
-import reactLogo from "./assets/main2.png";
+import profile from "./assets/main2.png";
+import unityLogo from "./assets/unity.png";
 import TimelineConnector from "./components/Connectors/TimelineConnector";
 import TimelineEnd from "./components/Connectors/TimelineEnd";
 import TimelineStart from "./components/Connectors/TimelineStart";
@@ -15,7 +18,7 @@ function App() {
   return (
     <>
       <div className="app__header">
-        <img src={reactLogo} className="profile" alt="profile picture" />
+        <img src={profile} className="profile" alt="profile picture" />
         <div className="icons">
           <i
             className="pi pi-send"
@@ -204,7 +207,7 @@ function App() {
             dateString="Sep 2021 - Sep 2022"
             title="Game Developer"
             companyName="Independent"
-            imgSrc="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2021%2F11%2FUnity-Emblem.png&sp=1729210159T8e84f57d096daa9a3306536df3abeee84210c63a81e5b062aeaeb8af899a549c"
+            imgSrc={unityLogo}
             stats={[
               { name: "C#", level: 85 },
               { name: "OOP Principles", level: 97 },
@@ -242,7 +245,7 @@ function App() {
             dateString="Jun 2021 - Sep 2021"
             title="AI Engineering Intern"
             companyName="Clean Energy Asociates"
-            imgSrc="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._AtuIFHqkhrF5qnf4XBObQAAAA%26pid%3DApi&sp=1729208222T95471b9f3063c29b2c370fe2ddcad8989ac165a6d89cf311b58529c5a52fccc3"
+            imgSrc={ceaLogo}
             stats={[
               { name: "Python", level: 90 },
               { name: "ML Libraries", level: 80 },
@@ -274,7 +277,7 @@ function App() {
             dateString="Sep 2018 - Sep 2022"
             title="Computer Science Student"
             companyName="Carleton College"
-            imgSrc="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.X4jUEd9r9SosSJO_A73UiQHaHa%26pid%3DApi&sp=1729207748T2a2ab5060e5cfcbc0d29c6c408fe839b963e55900499b5bb13af1d0653bbae81"
+            imgSrc={carletonLogo}
             stats={[
               { name: "Python", level: 90 },
               { name: "ML Libraries", level: 80 },
