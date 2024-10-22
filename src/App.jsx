@@ -140,6 +140,52 @@ function App() {
                 adventures based on your location.
               </p>
             }
+            readMoreText={
+              <div className="columns">
+                <p>
+                  Mystica is an AI-powered, text-based adventure game. In it,
+                  you wander the real world, going to real locations, and fight
+                  fantasy creatures. However, unlike other games that blend game
+                  and reality, we don't use AR—instead, we focus on the combat
+                  experience itself, aiming to replicate text adventures and
+                  tabletop roleplaying games. In Mystica, you are met with a
+                  situation and are tasked with overcoming whatever challenge it
+                  presents by describing the choices you make. The AI responds,
+                  and that's how the game plays out.
+                </p>
+                <p>
+                  From a technical standpoint, this is quite challenging.
+                  Despite the “magic” of AI, we're asking a lot of it—we're
+                  asking it to act as a game engine. At Tricky Djinn, I was
+                  tasked with designing and implementing the fundamental game
+                  loop interaction between player and AI. Rather than building
+                  our own AI from scratch, I decided to use an LLM API. However,
+                  LLMs return text, not data, and are trained to behave like
+                  chat bots, not game engines. Initially, I solved this by using
+                  a sequence of prompts where each step wraps user content in
+                  specific instructions on processing and output-format, spits
+                  out some xml, and then gets repeated until the steps are
+                  completed. Finally, it'll spit out its response for the
+                  outcome, along with a bunch of meta data for affecting user
+                  health and the state of the encounter. This, I believe, is
+                  also partially how Open AI's newest strawberry model works.
+                </p>
+                <p>
+                  This process worked great, however it can be improved. It's
+                  expensive to use a big model (it was required for the
+                  complexity of outputs we were asking of it), and we were using
+                  a lot of tokens. However, I realized that we could use the
+                  larger model with all of the massive, hyper-engineered prompts
+                  to create training data for a smaller model. The smaller model
+                  wouldn't need instructions on what to do, nor would it need
+                  instructions on output formatting. With a few iterations, I
+                  built our training data and fine tuned a smaller LLM model.
+                  Despite fine-tuned models costing more, this new process
+                  reduced our input token-count by over 50%, saving us 30% on
+                  our projected operating costs.
+                </p>
+              </div>
+            }
           >
             <ul>
               <li>
@@ -181,6 +227,67 @@ function App() {
               { name: "CSS", level: 85 },
               { name: "MongoDB", level: 80 },
             ]}
+            readMoreText={
+              <div className="columns">
+                <p>
+                  Co-GM is an online note taking tool that I built specifically
+                  to help GMs (the people who run games of Dungeons and Dragons)
+                  keep their ideas organized and their head in the game rather
+                  than in their screens. It's a niche tool, but since the
+                  project's beginnings I've garnered nearly 1,500 users and over
+                  50 paying monthly subscribers. Besides notes, the tool
+                  incorporates a large array of other tools critical to any GM's
+                  toolbox, and integrates all of them. Notes link together, but
+                  you can also link to things that aren't notes to create other
+                  effects, like automatically rolling dice or generating random
+                  content. You can share libraries of notes with other users,
+                  and you can publish your work on a shared workshop to allow
+                  other users to find tools they'd find useful for themselves.
+                </p>
+                <p>
+                  To build this tool, I taught myself almost everything. It's
+                  built on a React frontend, it's got a TypeScript Node backend,
+                  and all the data is stored in MongoDB. The app is set up with
+                  CI/CD via GitHub actions, and deploys automatically to staging
+                  environments in Azure App services. From there, I can perform
+                  further testing and release to users. In addition to all of
+                  the languages and frameworks used, I overcame the following
+                  technical challenges:
+                </p>
+                <ul>
+                  <li>
+                    I built the security from scratch, enabling a system where
+                    users can share content with each other but not edit each
+                    other's work.
+                  </li>
+                  <li>
+                    I designed and implemented nuanced and complex
+                    note-relationship patterns. For example, typing out a date
+                    in a note makes the note automatically show up in a fantasy
+                    (non-gregorian) calendar.
+                  </li>
+                  <li>
+                    I implemented a rich rich text editor in the browser, and
+                    then extended it to enable custom elements and behaviors.
+                  </li>
+                </ul>
+                <p>
+                  Building and growing Co-GM required a lot of additional softer
+                  skills. I made the creatives and ran an ad campaign on Reddit
+                  with comments turned on, meaning I was regularly interacting
+                  directly with my potential consumers. I was Customer Support
+                  as well, meaning I was directly helping those consumers
+                  troubleshoot their issues (it also made me much more concerned
+                  about the quality of logging in prod, the importance of
+                  backups, and how to do smooth feature rollouts). And lastly,
+                  for a few months of the project, I managed to convince someone
+                  else to work on the project with me. I onboarded them, and
+                  during that time acted as a mentor, teaching them the work
+                  cycle of the project and helping them find easier but still
+                  meaningful tasks to work on.
+                </p>
+              </div>
+            }
           >
             <ul>
               <li>
@@ -215,8 +322,11 @@ function App() {
             ]}
             description={
               <p>
-                In partnership with another developer, I developed a
-                multiplayer, 3D RPG from the ground up.{" "}
+                In partnership with another developer, I developed{" "}
+                <a href="https://www.kickstarter.com/projects/1863228575/tell-your-tale?ref=discovery&term=Tell%20Your%20Tale&total_hits=16&category_id=35">
+                  Tell Your Tale
+                </a>
+                , a multiplayer, 3D RPG, from the ground up.{" "}
                 <strong>
                   Advanced OOP, lots of design patterns, and concurrency/race
                   conditions

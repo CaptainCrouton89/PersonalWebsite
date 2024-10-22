@@ -106,5 +106,26 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #646cff;
+  background-color: var(--primary-color);
+}
+
+.read-more {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  color: var(--hover-color);
+}
+
+.read-more-container {
+  margin-top: 1rem;
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 3rem;
+  text-align: justify;
+  margin-bottom: 1rem;
 }
