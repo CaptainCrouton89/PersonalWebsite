@@ -103,13 +103,16 @@ function App() {
                 reducing technical debt.
               </li>
               <li>
-                <b>Architected and coordinated</b> development of feature across{" "}
-                <b>four different applications</b> and a 3rd-party API for
-                messaging service to provide real-time updates to users.
+                <b>
+                  Architected and coordinated development of features across
+                  multiple applications
+                </b>{" "}
+                and 3rd-party APIs, such as for a messaging service to provide
+                real-time updates to users.
               </li>
               <li>
-                Identified and fixed authentication and authorization issues
-                across the application,{" "}
+                Identified and fixed longstanding authentication and
+                authorization issues across the application,{" "}
                 <b>
                   resolving critical security vulnerabilities in production code
                 </b>
@@ -363,17 +366,22 @@ function App() {
             description={
               <p>
                 Developed machine vision algorithms for processing and flagging
-                images of solar panels.
+                images of solar panels. They set me loose, and I wowed them by{" "}
+                <strong>
+                  automating training data collection and then completing the AI
+                  model that used it
+                </strong>
+                .
               </p>
             }
           >
             <ul>
               <li>
-                Identified inefficiency in training data collection methods and
-                <b>independently developed a pythong application</b> for turning
-                images into usable training data, saving the company 25 hours of
-                work per week (<b>500%+ increase in efficiency</b>). I hate
-                inefficiency.
+                Identified inefficiency in training data collection methods and{" "}
+                <b>independently developed a Python application</b> using
+                classical Python image processing libraries to turn images into
+                usable training data, saving the company 25 hours of work per
+                week (<b>500%+ increase in efficiency</b>). I hate inefficiency.
               </li>
               <li>
                 Implemented convolutional neural networks for image processing
