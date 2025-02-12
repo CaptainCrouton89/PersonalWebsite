@@ -82,7 +82,7 @@ function App() {
           <TimelineBlock
             dateString="Feb 2025 - Present"
             title="Cofounder"
-            location={"Minneapolis, MN"}
+            location={"San Francisco, CA"}
             companyName="Odapt"
             imgSrc={odaptLogo}
             stats={[
