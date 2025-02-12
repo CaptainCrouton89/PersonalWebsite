@@ -22,6 +22,33 @@
   flex: 2;
 }
 
+@media (max-width: 768px) {
+  #root {
+    padding: 1.25rem;
+  }
+
+  .app__header {
+    padding: calc(1.25rem + 1vw);
+  }
+
+  .timeline-block {
+    padding: 2rem;
+  }
+
+  .timeline-block__container {
+    flex-direction: column;
+    gap: 0rem;
+    margin-top: 0;
+  }
+  .timeline-block__left {
+    min-height: 0;
+  }
+
+  .timeline-block img {
+    max-height: 300px;
+  }
+}
+
 .timeline-block img {
   border-radius: 8px;
   width: 100%;
@@ -32,6 +59,13 @@
 
 .timeline-block__date {
   font-weight: 300;
+}
+
+.timeline-block__location {
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #a7a7a7;
 }
 
 .timeline-block h3 {

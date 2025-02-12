@@ -4,6 +4,7 @@ import "./TimelineBlock.css";
 
 export default function TimelineBlock({
   dateString,
+  location,
   companyName,
   title,
   imgSrc,
@@ -18,6 +19,7 @@ export default function TimelineBlock({
     <div className="timeline-block">
       <h3>{title}</h3>
       <h4>{companyName}</h4>
+      <div className="timeline-block__location">{location}</div>
       <div className="timeline-block__date">{dateString}</div>
       <div className="timeline-block__container">
         <div className="timeline-block__left">

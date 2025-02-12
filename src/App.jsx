@@ -4,8 +4,10 @@ import { useTypewriter } from "sr-quick";
 import "./App.css";
 import carletonLogo from "./assets/carleton.png";
 import ceaLogo from "./assets/cea.png";
+import compozeLogo from "./assets/compoze.png";
 import concordLogo from "./assets/concord.jpeg";
 import profile from "./assets/main2.png";
+import odaptLogo from "./assets/odapt.png";
 import unityLogo from "./assets/unity.png";
 import TimelineConnector from "./components/Connectors/TimelineConnector";
 import TimelineEnd from "./components/Connectors/TimelineEnd";
@@ -54,11 +56,22 @@ function App() {
         <h1>
           Hi! <strong>{imSilasText}</strong>
         </h1>
-        <p>
-          I'm a software engineer who's hobbies include: <strong>coding</strong>
-          , <strong>coding</strong>, and <strong>coding</strong>. Sometimes I do
-          other things too like launching side projects, developing games, and
-          running D&D campaigns, but mostly I like to code.
+        <p className="app__subheader">
+          Software developer who never learned when to stop building. My{" "}
+          <a
+            href="https://github.com/CaptainCrouton89"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            repositories
+          </a>{" "}
+          multiply like rabbits, my side projects have side projects, and my D&D
+          campaigns come with their own{" "}
+          <a href="https://cogm.tech" target="_blank" rel="noopener noreferrer">
+            custom-built digital platforms
+          </a>
+          . Haven't met a technical challenge yet that outlasts my ability to
+          forget what time it is.
         </p>
         <h4>Here's what I've been up to...</h4>
       </div>
@@ -67,8 +80,88 @@ function App() {
           <h2>Timeline</h2>
           <TimelineStart />
           <TimelineBlock
-            dateString="2022 - Present"
+            dateString="Feb 2025 - Present"
+            title="Cofounder"
+            location={"Minneapolis, MN"}
+            companyName="Odapt"
+            imgSrc={odaptLogo}
+            stats={[
+              { name: "System Architecture", level: 70 },
+              { name: "AI Integration", level: 80 },
+              { name: "Start-uppy stuff :)", level: 90 },
+            ]}
+            description={
+              <p>
+                Check out the website at <a href="https://odapt.ai">odapt.ai</a>
+                . Odapt lets you build web apps with plain english.{" "}
+                <strong>From idea to deployment in minutes</strong>.
+              </p>
+            }
+          >
+            <ul>
+              <li>
+                <b>Migrated entire frontend</b> from raw html/js to React.
+              </li>
+              <li>
+                Will be adding more here soon, but I'm too busy building to
+                write :)
+              </li>
+            </ul>
+          </TimelineBlock>
+          <TimelineConnector />
+          <TimelineBlock
+            dateString="Jan 2025 - Feb 2025"
+            title="AI Engineer"
+            location={"Minneapolis, MN"}
+            companyName="CompozeLabs"
+            imgSrc={compozeLogo}
+            stats={[
+              { name: "AI Integration", level: 75 },
+              { name: "NextJS", level: 80 },
+              { name: "AWS", level: 60 },
+              { name: "AI Framework Design", level: 70 },
+            ]}
+            description={
+              <p>
+                I solo-stood up a{" "}
+                <strong>voice-interactive sales-coaching tool</strong>. Using a
+                novel architecture that uses multiple LLMs to analyze a
+                conversation in real time, I was able to build a tool where{" "}
+                <strong>
+                  a user can practice real-time sales pitches against a voice AI
+                  modeled on a real person.
+                </strong>{" "}
+                The AI can ask questions, respond to the user, and provide
+                feedback on the user's performance.
+              </p>
+            }
+          >
+            <ul>
+              <li>
+                POV was estimated to take 4-6 weeks, <b>I did it in one</b>.
+              </li>
+              <li>
+                <b>Designed and implemented</b> a novel "thinker" architecture.{" "}
+                <b>Integrates multiple LLMs</b> to analyze a conversation in
+                real time and gave feedback to the voice model,{" "}
+                <b>enabling higher performance</b>.
+              </li>
+              <li>
+                Worked closely with client to <b>refine product</b>,{" "}
+                <b>manage project scope and priorities</b> and{" "}
+                <b>rapidly iterate on the product to meet client needs</b>.
+              </li>
+              <li>
+                Had the term <b>"silas velocity"</b> coined by colleagues,
+                referring to the speed at which I develop quality code.
+              </li>
+            </ul>
+          </TimelineBlock>
+          <TimelineConnector />
+          <TimelineBlock
+            dateString="Aug 2022 - Dec 2024"
             title="Consultant"
+            location={"Minneapolis, MN"}
             companyName="Concord USA"
             imgSrc={concordLogo}
             stats={[
@@ -79,15 +172,15 @@ function App() {
             ]}
             description={
               <p>
-                I do technical consulting. This means{" "}
+                I did technical consulting. This meant{" "}
                 <strong>
-                  diagnosing and solving problems for a client before they know
-                  they have them.
+                  diagnosing and solving problems for a client before they knew
+                  they had them.
                 </strong>{" "}
-                I help refine product needs, coordinate resources across teams
-                to solve solutions quickly, and architect new solutions. One
-                part professional communicator, one part software engineer, and
-                a little bit of everything else.
+                I helped refine product needs, coordinated resources across
+                teams to solve solutions quickly, and architected new solutions.
+                One part professional communicator, one part software engineer,
+                and a little bit of everything else.
               </p>
             }
           >
@@ -119,8 +212,9 @@ function App() {
           </TimelineBlock>
           <TimelineConnector />
           <TimelineBlock
-            dateString="Aug 2024 - Present"
+            dateString="Aug 2024 - Dec 2024"
             title="Lead Developer at Mystica"
+            location={"Minneapolis, MN"}
             companyName="Tricky Djinn LLC"
             imgSrc="https://mystica.cloud/logo.png"
             stats={[
@@ -162,6 +256,7 @@ function App() {
           <TimelineBlock
             dateString="Mar 2023 - Jul 2024"
             title="Founder of Co-GM"
+            location={"Minneapolis, MN"}
             companyName="Rhyneer Consulting LLC"
             imgSrc="https://cogmprod.blob.core.windows.net/main/images/landing%20page/computer-session.png"
             description={
@@ -206,6 +301,7 @@ function App() {
           <TimelineBlock
             dateString="Sep 2021 - Sep 2022"
             title="Game Developer"
+            location={"Claremont, CA"}
             companyName="Independent"
             imgSrc={unityLogo}
             stats={[
@@ -244,6 +340,7 @@ function App() {
           <TimelineBlock
             dateString="Jun 2021 - Sep 2021"
             title="AI Engineering Intern"
+            location={"Boulder, CO"}
             companyName="Clean Energy Asociates"
             imgSrc={ceaLogo}
             stats={[
@@ -276,6 +373,7 @@ function App() {
           <TimelineBlock
             dateString="Sep 2018 - Sep 2022"
             title="Computer Science Student"
+            location={"Northfield, MN"}
             companyName="Carleton College"
             imgSrc={carletonLogo}
             stats={[

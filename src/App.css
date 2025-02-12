@@ -48,3 +48,13 @@ strong {
 a {
   text-decoration: underline !important;
 }
+
+.app__subheader a {
+  color: #9ea2ed;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.app__subheader a:hover {
+  text-decoration: underline !important;
+}
