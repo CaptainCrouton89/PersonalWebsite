@@ -11,8 +11,10 @@ export default function TimelineBlock({
   description,
   showStatsDefault = true,
   children,
+  readMoreText,
   stats = [],
 }) {
+  const [readMore, setReadMore] = useState(false);
   const [showStats, setShowStats] = useState(showStatsDefault);
 
   return (
@@ -21,31 +23,45 @@ export default function TimelineBlock({
       <h4>{companyName}</h4>
       <div className="timeline-block__location">{location}</div>
       <div className="timeline-block__date">{dateString}</div>
-      <div className="timeline-block__container">
-        <div className="timeline-block__left">
-          <img src={imgSrc} />
-        </div>
-        <div className="timeline-block__right timeline-block__text">
-          {description}
-          <div className="timeline-block__toggle">
-            <button
-              onClick={() => setShowStats(true)}
-              className={showStats ? "toggle active" : "toggle"}
-            >
-              Skills
-            </button>
-            <button
-              onClick={() => setShowStats(false)}
-              className={!showStats ? "toggle active" : "toggle"}
-            >
-              Details
-            </button>
-          </div>
-          <div className="timeline-block__body">
-            {showStats ? <SkillStats stats={stats} /> : children}
+      {readMore ? (
+        <div className="read-more-container">
+          {readMoreText}
+          <div className="read-more" onClick={() => setReadMore(false)}>
+            Read less
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="timeline-block__container">
+          <div className="timeline-block__left">
+            <img src={imgSrc} />
+          </div>
+          <div className="timeline-block__right timeline-block__text">
+            {description}
+            <div className="timeline-block__toggle">
+              <button
+                onClick={() => setShowStats(true)}
+                className={showStats ? "toggle active" : "toggle"}
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => setShowStats(false)}
+                className={!showStats ? "toggle active" : "toggle"}
+              >
+                Details
+              </button>
+            </div>
+            <div className="timeline-block__body">
+              {showStats ? <SkillStats stats={stats} /> : children}
+            </div>
+            {!showStats && readMoreText && (
+              <div className="read-more" onClick={() => setReadMore(true)}>
+                Read more
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -79,6 +95,7 @@ TimelineBlock.propTypes = {
   description: PropTypes.node.isRequired,
   showStatsDefault: PropTypes.bool,
   children: PropTypes.node.isRequired,
+  readMoreText: PropTypes.node,
   stats: PropTypes.arrayOf(object).isRequired,
 };
 
