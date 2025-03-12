@@ -24,7 +24,7 @@
   padding: 0.5rem 0.75rem;
 }
 .pi:hover {
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 img.profile {

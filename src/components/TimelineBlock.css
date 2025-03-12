@@ -84,6 +84,7 @@
 }
 
 .timeline-block__toggle {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,17 +141,17 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
 }
 
 .read-more {
-  color: var(--primary-color);
+  color: var(--color-primary);
   text-decoration: underline;
   cursor: pointer;
 }
 
 .read-more:hover {
-  color: var(--hover-color);
+  color: var(--color-hover);
 }
 
 .read-more-container {

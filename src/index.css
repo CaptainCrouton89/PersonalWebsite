@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --primary-color: #636aff;
-  --hover-color: #545cef;
-  --background-color: #242424;
+  --color-primary: #636aff;
+  --color-hover: #545cef;
+  --color-card: #313131;
+  --background-color: #1a1a1a;
   --text-color: #ffffff;
+  --color-foreground: #a7a7a7;
   --border-color: #313131;
   --card-color: #313131;
   --card-hover-color: #414141;
@@ -30,11 +32,11 @@
 
 a {
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--color-primary);
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--hover-color);
+  color: var(--color-hover);
 }
 
 body {
@@ -62,7 +64,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 button:focus,
 button:focus-visible {
