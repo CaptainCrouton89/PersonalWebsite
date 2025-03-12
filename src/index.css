@@ -1,18 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --primary-color: #636aff;
+  --hover-color: #545cef;
+  --background-color: #242424;
+  --text-color: #ffffff;
+  --border-color: #313131;
+  --card-color: #313131;
+  --card-hover-color: #414141;
+  --card-text-color: #ffffff;
+  --card-border-color: #313131;
+  --card-shadow-color: #000000;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text-color);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-color: #636aff;
-  --hover-color: #545cef;
 }
 
 a {
