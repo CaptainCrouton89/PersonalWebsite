@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "primeicons/primeicons.css";
 import { useTypewriter } from "sr-quick";
-import "./App.css";
 import carletonLogo from "./assets/carleton.png";
 import ceaLogo from "./assets/cea.png";
 import compozeLogo from "./assets/compoze.png";
@@ -19,9 +18,13 @@ function App() {
 
   return (
     <>
-      <div className="app__header">
-        <img src={profile} className="profile" alt="profile picture" />
-        <div className="icons">
+      <div className="mt-24 px-[20%]">
+        <img
+          src={profile}
+          className="rounded-full w-52 h-52 mx-auto mb-6 object-cover"
+          alt="profile picture"
+        />
+        <div className="flex justify-center mb-12 text-[rgb(98,98,98)]">
           <i
             className="pi pi-send"
             onClick={() =>
@@ -56,8 +59,8 @@ function App() {
         <h1>
           Hi! <strong>{imSilasText}</strong>
         </h1>
-        <p className="app__subheader">
-          Software developer who never learned when to stop building. My{" "}
+        <p className="text-lg text-gray-200 mb-6">
+          I'm a software developer who never learned when to stop building. My{" "}
           <a
             href="https://github.com/CaptainCrouton89"
             target="_blank"

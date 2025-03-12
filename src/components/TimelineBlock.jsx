@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-// Removing CSS import since we're using Tailwind
-// import "./TimelineBlock.css";
 
 export default function TimelineBlock({
   dateString,

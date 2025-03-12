@@ -15,6 +15,14 @@
   --card-shadow-color: #000000;
 }
 
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -50,4 +58,28 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.pi {
+  transition: color 0.25s;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
+.pi:hover {
+  color: var(--color-primary);
+}
+
+h1 strong {
+  color: #9296e3;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 500;
+  color: #9ea2ed;
+}
+
+a {
+  text-decoration: underline !important;
+  cursor: pointer;
 }
