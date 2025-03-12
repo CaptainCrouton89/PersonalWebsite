@@ -46,19 +46,19 @@ export default function TimelineBlock({
           </div>
           <div className="md:flex-2">
             {description}
-            <div className="mt-4 flex justify-center items-center">
+            <div className="my-4 flex justify-center items-center">
               <button
                 onClick={() => setShowStats(true)}
-                className={`border border-[#c0c2ef] py-2 px-4 font-medium text-[#c0c2ef] cursor-pointer transition-colors duration-500 rounded-none first:rounded-l-lg ${
-                  showStats ? "bg-[#c0c2ef] text-[#1a1a1a]" : ""
+                className={`border border-primary py-2 px-4 font-medium cursor-pointer transition-colors duration-500 rounded-none rounded-l-lg ${
+                  showStats ? "bg-primary text-background" : "text-primary"
                 } focus:outline-none`}
               >
                 Skills
               </button>
               <button
                 onClick={() => setShowStats(false)}
-                className={`border border-[#c0c2ef] py-2 px-4 font-medium text-[#c0c2ef] cursor-pointer transition-colors duration-500 rounded-none last:rounded-r-lg ${
-                  !showStats ? "bg-[#c0c2ef] text-[#1a1a1a]" : ""
+                className={`border border-primary py-2 px-4 font-medium cursor-pointer transition-colors duration-500 rounded-none rounded-r-lg ${
+                  !showStats ? "bg-primary text-background" : "text-primary"
                 } focus:outline-none`}
               >
                 Details
@@ -67,7 +67,7 @@ export default function TimelineBlock({
             <div>{showStats ? <SkillStats stats={stats} /> : children}</div>
             {!showStats && readMoreText && (
               <div
-                className="text-[var(--color-primary)] underline cursor-pointer hover:text-[var(--color-hover)]"
+                className="text-primary underline cursor-pointer hover:text-hover"
                 onClick={() => setReadMore(true)}
               >
                 Read more
@@ -95,9 +95,9 @@ function SkillStats({ stats }) {
 
 function SkillBar({ level }) {
   return (
-    <div className="rounded-md h-[7px] bg-[#1a1a1a] relative">
+    <div className="rounded-md h-[7px] bg-background relative">
       <div
-        className="rounded-md absolute top-0 left-0 h-full bg-[var(--color-primary)]"
+        className="rounded-md absolute top-0 left-0 h-full bg-primary"
         style={{ width: `${level}%` }}
       ></div>
     </div>
