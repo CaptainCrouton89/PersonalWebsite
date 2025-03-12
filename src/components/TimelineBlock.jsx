@@ -16,6 +16,8 @@ export default function TimelineBlock({
   const [readMore, setReadMore] = useState(false);
   const [showStats, setShowStats] = useState(showStatsDefault);
 
+  console.log(showStatsDefault);
+
   return (
     <div className="text-left rounded-lg p-8 md:p-12 md:pb-20 bg-card shadow-md">
       <h3 className="text-2xl md:text-4xl mt-4 font-normal text-white">

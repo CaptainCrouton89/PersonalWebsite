@@ -20,8 +20,17 @@ export const timelineData = [
     ],
     description: <p>I provide consulting services to a variety of clients.</p>,
     bullets: [
-      <li key="odapt-1">
-        <b>Migrated entire frontends</b> from raw html/js to React.
+      <li key="rhyneer-1">
+        <b>
+          Migrated entirety of <a href="https://odapt.ai">odapt.ai</a> from raw
+          html/js to React.
+        </b>
+      </li>,
+      <li key="rhyneer-2">
+        Built <a href="https://humanitysvoice.net">humanitysvoice.net</a>, a{" "}
+        <b>crowd sourced social media posting tool</b>, where users can vote on
+        words to be added to a growing social media post that then gets posted
+        each day.
       </li>,
     ],
   },
@@ -148,44 +157,45 @@ export const timelineData = [
       </p>
     ),
     readMoreText: (
-      <div className="columns">
+      <div className="columns-1 md:columns-2 gap-6 space-y-4">
         <p>
-          Mystica is an AI-powered, text-based adventure game. In it, you wander
-          the real world, going to real locations, and fight fantasy creatures.
-          However, unlike other games that blend game and reality, we don&apos;t
-          use AR—instead, we focus on the combat experience itself, aiming to
-          replicate text adventures and tabletop roleplaying games. In Mystica,
-          you are met with a situation and are tasked with overcoming whatever
-          challenge it presents by describing the choices you make. The AI
-          responds, and that&apos;s how the game plays out.
+          &nbsp;&nbsp;Mystica is an AI-powered, text-based adventure game. In
+          it, you wander the real world, going to real locations, and fight
+          fantasy creatures. However, unlike other games that blend game and
+          reality, we don&apos;t use AR—instead, we focus on the combat
+          experience itself, aiming to replicate text adventures and tabletop
+          roleplaying games. In Mystica, you are met with a situation and are
+          tasked with overcoming whatever challenge it presents by describing
+          the choices you make. The AI responds, and that&apos;s how the game
+          plays out.
         </p>
         <p>
-          From a technical standpoint, this is quite challenging. Despite the
-          &quot;magic&quot; of AI, we&apos;re asking a lot of it—we&apos;re
-          asking it to act as a game engine. At Tricky Djinn, I was tasked with
-          designing and implementing the fundamental game loop interaction
-          between player and AI. Rather than building our own AI from scratch, I
-          decided to use an LLM API. However, LLMs return text, not data, and
-          are trained to behave like chat bots, not game engines. Initially, I
-          behave like chat bots, not game engines. Initially, I solved this by
-          using a sequence of prompts where each step wraps user content in
-          specific instructions on processing and output-format, spits out some
-          xml, and then gets repeated until the steps are completed. Finally,
-          it&apos;ll spit out its response for the outcome, along with a bunch
-          of meta data for affecting user health and the state of the encounter.
-          This, I believe, is also partially how Open AI&apos;s newest
-          strawberry model works.
+          &nbsp;&nbsp;From a technical standpoint, this is quite challenging.
+          Despite the &quot;magic&quot; of AI, we&apos;re asking a lot of
+          it—we&apos;re asking it to act as a game engine. At Tricky Djinn, I
+          was tasked with designing and implementing the fundamental game loop
+          interaction between player and AI. Rather than building our own AI
+          from scratch, I decided to use an LLM API. However, LLMs return text,
+          not data, and are trained to behave like chat bots, not game engines.
+          Initially, I behave like chat bots, not game engines. Initially, I
+          solved this by using a sequence of prompts where each step wraps user
+          content in specific instructions on processing and output-format,
+          spits out some xml, and then gets repeated until the steps are
+          completed. Finally, it&apos;ll spit out its response for the outcome,
+          along with a bunch of meta data for affecting user health and the
+          state of the encounter. This, I believe, is also partially how Open
+          AI&apos;s newest strawberry model works.
         </p>
         <p>
-          This process worked great, however it can be improved. It&apos;s
-          expensive to use a big model (it was required for the complexity of
-          outputs we were asking of it), and we were using a lot of tokens.
-          However, I realized that we could use the larger model with all of the
-          massive, hyper-engineered prompts to create training data for a
-          smaller model. The smaller model wouldn&apos;t need instructions on
-          what to do, nor would it need instructions on output formatting. With
-          it need instructions on output formatting. With a few iterations, I
-          built our training data and fine tuned a smaller LLM model. Despite
+          &nbsp;&nbsp;This process worked great, however it can be improved.
+          It&apos;s expensive to use a big model (it was required for the
+          complexity of outputs we were asking of it), and we were using a lot
+          of tokens. However, I realized that we could use the larger model with
+          all of the massive, hyper-engineered prompts to create training data
+          for a smaller model. The smaller model wouldn&apos;t need instructions
+          on what to do, nor would it need instructions on output formatting.
+          With it need instructions on output formatting. With a few iterations,
+          I built our training data and fine tuned a smaller LLM model. Despite
           fine-tuned models costing more, this new process reduced our input
           token-count by over 50%, saving us 30% on our projected operating
           costs.
@@ -235,35 +245,37 @@ export const timelineData = [
       { name: "MongoDB", level: 80 },
     ],
     readMoreText: (
-      <div className="columns">
+      <div className="columns-1 md:columns-2 gap-6 space-y-4">
         <p>
-          Co-GM is an online note taking tool that I built specifically to help
-          GMs (the people who run games of Dungeons and Dragons) keep their
-          ideas organized and their head in the game rather than in their
-          screens. It&apos;s a niche tool, but since the project&apos;s
-          beginnings I&apos;ve garnered nearly 1,500 users and over 50 paying
-          monthly subscribers. Besides notes, the tool incorporates a large
-          array of other tools critical to any GM&apos;s toolbox, and integrates
-          all of them. Notes link together, but you can also link to things that
-          aren&apos;t notes to create other effects, like automatically rolling
-          dice or generating random content. You can share libraries of notes
-          with other users, and you can publish your work on a shared workshop
-          to allow other users to find tools they&apos;d find useful for
-          themselves.
+          &nbsp;&nbsp;Co-GM is an online note taking tool that I built
+          specifically to help GMs (the people who run games of Dungeons and
+          Dragons) keep their ideas organized and their head in the game rather
+          than in their screens. It&apos;s a niche tool, but since the
+          project&apos;s beginnings I&apos;ve garnered nearly 1,500 users and
+          over 50 paying monthly subscribers. Besides notes, the tool
+          incorporates a large array of other tools critical to any GM&apos;s
+          toolbox, and integrates all of them. Notes link together, but you can
+          also link to things that aren&apos;t notes to create other effects,
+          like automatically rolling dice or generating random content. You can
+          share libraries of notes with other users, and you can publish your
+          work on a shared workshop to allow other users to find tools
+          they&apos;d find useful for themselves.
         </p>
         <p>
-          To build this tool, I taught myself almost everything. It&apos;s built
-          on a React frontend, it&apos;s got a TypeScript Node backend, and all
-          the data is stored in MongoDB. The app is set up with CI/CD via GitHub
-          actions, and deploys automatically to staging environments in Azure
-          App services. From there, I can perform further testing and release to
-          users. In addition to all of the languages and frameworks used, I
-          overcame the following technical challenges:
+          &nbsp;&nbsp;To build this tool, I taught myself almost everything.
+          It&apos;s built on a React frontend, it&apos;s got a TypeScript Node
+          backend, and all the data is stored in MongoDB. The app is set up with
+          CI/CD via GitHub actions, and deploys automatically to staging
+          environments in Azure App services. From there, I can perform further
+          testing and release to users. In addition to all of the languages and
+          frameworks used, I overcame the following technical challenges:
         </p>
         <ul>
           <li>
-            I built the security from scratch, enabling a system where users can
-            share content with each other but not edit each other&apos;s work.
+            I designed and implemented a custom security system from the ground
+            up, creating a robust permissions framework that allows users to
+            selectively share content while maintaining strict control over who
+            can view versus edit their work.
           </li>
           <li>
             I designed and implemented nuanced and complex note-relationship
@@ -276,13 +288,13 @@ export const timelineData = [
           </li>
         </ul>
         <p>
-          Building and growing Co-GM required a lot of additional softer skills.
-          I made the creatives and ran an ad campaign on Reddit with comments
-          turned on, meaning I was regularly interacting directly with my
-          potential consumers. I was Customer Support as well, meaning I was
-          directly helping those consumers troubleshoot their issues (it also
-          made me much more concerned about the quality of logging in prod, the
-          importance of backups, and how to do smooth feature rollouts). And
+          &nbsp;&nbsp;Building and growing Co-GM required a lot of additional
+          softer skills. I made the creatives and ran an ad campaign on Reddit
+          with comments turned on, meaning I was regularly interacting directly
+          with my potential consumers. I was Customer Support as well, meaning I
+          was directly helping those consumers troubleshoot their issues (it
+          also made me much more concerned about the quality of logging in prod,
+          the importance of backups, and how to do smooth feature rollouts). And
           lastly, for a few months of the project, I managed to convince someone
           else to work on the project with me. I onboarded them, and during that
           time acted as a mentor, teaching them the work cycle of the project

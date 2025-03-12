@@ -83,3 +83,8 @@ a {
   text-decoration: underline !important;
   cursor: pointer;
 }
+
+.app__timeline ul {
+  list-style-type: disc !important;
+  margin-left: 1.25rem;
+}
