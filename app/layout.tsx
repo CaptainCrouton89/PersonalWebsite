@@ -1,47 +1,48 @@
+import type { Metadata } from "next";
 import "primeicons/primeicons.css";
 import "./index.css";
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Silas Rhyneer - Software Developer",
-  description: "AI-powered full-stack solutions for ambitious startups. Building the future, one line of code at a time.",
+  description:
+    "Personal portfolio website of Silas Rhyneer. AI, full-stack, startups, and everything in between.",
   icons: {
-    icon: "/icon.png"
+    icon: "/icon.png",
   },
   openGraph: {
     title: "Silas Rhyneer - Software Developer",
-    description: "AI-powered full-stack solutions for ambitious startups. Building the future, one line of code at a time.",
-    url: "https://silasrhyneer.com",
+    description:
+      "Personal portfolio website of Silas Rhyneer. AI, full-stack, startups, and everything in between.",
+    url: "https://silasrhyneer.me",
     siteName: "Silas Rhyneer",
     images: [
       {
         url: "/icon.png",
         width: 512,
         height: 512,
-        alt: "Silas Rhyneer"
-      }
+        alt: "Silas Rhyneer",
+      },
     ],
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary",
     title: "Silas Rhyneer - Software Developer",
-    description: "AI-powered full-stack solutions for ambitious startups. Building the future, one line of code at a time.",
-    images: ["/icon.png"]
-  }
+    description:
+      "Personal portfolio website of Silas Rhyneer. AI, full-stack, startups, and everything in between.",
+    images: ["/icon.png"],
+  },
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
