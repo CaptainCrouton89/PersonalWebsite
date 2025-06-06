@@ -6,6 +6,7 @@ import { useTypewriter } from "sr-quick";
 import profile from "./assets/main2.png";
 import Timeline from "./components/Timeline";
 import { timelineData } from "./data/timelineData";
+import ChatSection from "./components/ChatSection";
 
 export default function Home() {
   const imSilasText = useTypewriter("I'm Silas", 100, 1000);
@@ -72,6 +73,9 @@ export default function Home() {
           . Haven't met a technical challenge yet that outlasts my ability to
           forget what time it is.
         </p>
+        
+        <ChatSection />
+        
         <h4>Here's what I've been up to...</h4>
       </div>
       <div className="app__body">

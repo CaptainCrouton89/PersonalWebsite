@@ -50,3 +50,7 @@ The core feature is a timeline component system that displays career/project his
 ## Code Quality
 
 Always run both `npm run lint` and `npm run type-check` before committing changes to ensure code quality and type safety.
+
+### Testing Commands
+
+- To test, ONLY run the linter
