@@ -5,6 +5,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Silas Rhyneer - Software Developer",
   description: "Personal portfolio website of Silas Rhyneer, a software developer who never learned when to stop building.",
+  icons: {
+    icon: "/icon.png"
+  }
 };
 
 export default function RootLayout({
