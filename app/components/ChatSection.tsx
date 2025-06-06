@@ -40,24 +40,12 @@ export default function ChatSection() {
 
   return (
     <div className="w-full max-w-4xl mx-auto mt-8 mb-12">
-      {/* Header Section */}
-      <div className="text-center mb-6">
-        <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2">
-          Let's have a conversation
-        </h3>
-        <p className="text-gray-300 text-base sm:text-lg">
-          Ask me anything about my work, experience, or projects
-        </p>
-      </div>
 
       {/* Chat Container */}
       <div className="bg-gradient-to-br from-[#2a2a2a] via-[#313131] to-[#2a2a2a] rounded-2xl border border-[#404040] shadow-2xl overflow-hidden">
         {/* Quick Questions - Only show when no messages */}
         {messages.length === 0 && !isExpanded && (
           <div className="p-4 sm:p-6 border-b border-[#404040]">
-            <p className="text-sm text-gray-400 mb-4 text-center">
-              Start with a question:
-            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {suggestedQuestions.map((question, index) => (
                 <button
@@ -153,7 +141,7 @@ export default function ChatSection() {
                       </p>
                     ) : (
                       <div 
-                        className="text-sm leading-relaxed prose prose-invert prose-sm max-w-none prose-p:my-2 prose-headings:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-0"
+                        className="text-sm leading-relaxed prose prose-invert prose-sm max-w-none [&>p]:mb-4 [&>p:last-child]:mb-0 [&>ul]:list-disc [&>ul]:pl-6 [&>ol]:list-decimal [&>ol]:pl-6 [&>li]:mb-1 [&_pre]:whitespace-pre-wrap [&_code]:break-words"
                         dangerouslySetInnerHTML={{
                           __html: marked(message.content, { 
                             breaks: true,

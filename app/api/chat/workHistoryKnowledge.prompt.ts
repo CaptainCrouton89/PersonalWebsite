@@ -74,7 +74,7 @@ The core challenge was making LLMs behave like game engines rather than chatbots
 
 **Core Skills:** JavaScript (90%), Express (80%), Node (75%), Azure App Services (70%), CSS (85%), MongoDB (80%)
 
-Built powerful wiki tool for storytellers available at [cogm.tech](https://cogm.tech). **1500+ users, 50+ paying subscribers** and growing. Handled everything from UI/UX design to system architecture to marketing to customer service.
+Built powerful note-taking and wiki tool for storytellers available at [cogm.tech](https://cogm.tech). **1500+ users, 50+ paying subscribers** and growing. Handled everything from UI/UX design to system architecture to marketing to customer service.
 
 **Technical Architecture:** React frontend with TypeScript Node backend, MongoDB data storage. CI/CD via GitHub Actions with automatic deployment to Azure App Services staging environments.
 

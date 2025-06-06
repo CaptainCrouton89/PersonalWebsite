@@ -56,23 +56,6 @@ export default function Home() {
         <h1>
           Hi! <strong>{imSilasText}</strong>
         </h1>
-        <p className="text-lg text-gray-200 mb-6">
-          I'm a software developer who never learned when to stop building. My{" "}
-          <a
-            href="https://github.com/CaptainCrouton89"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            repositories
-          </a>{" "}
-          multiply like rabbits, my side projects have side projects, and my D&D
-          campaigns come with their own{" "}
-          <a href="https://cogm.tech" target="_blank" rel="noopener noreferrer">
-            custom-built digital platforms
-          </a>
-          . Haven't met a technical challenge yet that outlasts my ability to
-          forget what time it is.
-        </p>
         
         <ChatSection />
         
