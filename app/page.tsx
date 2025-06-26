@@ -13,15 +13,16 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-24">
+      <header className="mt-24">
         <Image
           src={profile}
           className="rounded-full w-52 h-52 mx-auto mb-6 object-cover"
-          alt="profile picture"
+          alt="Silas Rhyneer - Software Developer profile photo"
           width={208}
           height={208}
+          priority
         />
-        <div className="flex  justify-center mb-12 text-[rgb(98,98,98)]">
+        <nav className="flex justify-center mb-12 text-[rgb(98,98,98)]" aria-label="Social media links">
           <i
             className="pi pi-send"
             onClick={() =>
@@ -31,6 +32,18 @@ export default function Home() {
                 "noopener,noreferrer"
               )
             }
+            role="button"
+            tabIndex={0}
+            aria-label="Send email to Silas Rhyneer"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                window.open(
+                  "mailto:rhyneer.silas@gmail.com",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }
+            }}
           />
           <i
             className="pi pi-linkedin"
@@ -41,6 +54,18 @@ export default function Home() {
                 "noopener,noreferrer"
               )
             }
+            role="button"
+            tabIndex={0}
+            aria-label="View Silas Rhyneer's LinkedIn profile"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                window.open(
+                  "https://www.linkedin.com/in/silas-rhyneer/",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }
+            }}
           />
           <i
             className="pi pi-github"
@@ -51,19 +76,35 @@ export default function Home() {
                 "noopener,noreferrer"
               )
             }
+            role="button"
+            tabIndex={0}
+            aria-label="View Silas Rhyneer's GitHub profile"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                window.open(
+                  "https://github.com/CaptainCrouton89",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }
+            }}
           />
-        </div>
+        </nav>
         <h1>
           Hi! <strong>{imSilasText}</strong>
         </h1>
-        
+      </header>
+      
+      <section>
         <ChatSection />
-        
-        <h4>Here's what I've been up to...</h4>
-      </div>
-      <div className="app__body">
-        <Timeline timelineData={timelineData} />
-      </div>
+      </section>
+      
+      <section>
+        <h2>Here's what I've been up to...</h2>
+        <div className="app__body">
+          <Timeline timelineData={timelineData} />
+        </div>
+      </section>
     </>
   );
 }
